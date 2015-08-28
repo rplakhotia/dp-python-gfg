@@ -3,7 +3,7 @@ fib_lookup = dict()
 
 def fibonacci(num):
 
-   if num <= 1:
+   if num == 1 or num ==0:
       fib_lookup[num]=num
    else:
       if 'num' not in fib_lookup:
