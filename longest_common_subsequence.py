@@ -3,14 +3,10 @@
 seq_one = "ABCDGHHH"
 seq_two = "AEDFHRHH"
 
-len_seq_one = len(seq_one)
-len_seq_two = len(seq_two)
-
-LCS = [[0 for x in range(len_seq_one+1)] for y in range(len_seq_two+1)]
-
 def get_longest_common_subsequence(seq_one, seq_two):
    len_seq_one = len(seq_one)
    len_seq_two = len(seq_two)
+   LCS = [[0 for x in range(len_seq_one+1)] for y in range(len_seq_two+1)]
 
    for i in range(0, len_seq_one+1):
       for j in range(0,len_seq_two+1):
