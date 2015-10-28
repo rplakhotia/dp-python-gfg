@@ -1,8 +1,7 @@
 
 #from enum import Enum
 # edit distance function calculates the minimum number of operations
-# required for changing one string to another, also keeps the trace
-# of operations
+# required for changing one string to another 
 
 def edit_distance(texta, textb, lena, lenb):
 	
@@ -18,32 +17,32 @@ def edit_distance(texta, textb, lena, lenb):
 
 			if j == 0:
 				D[i][j]= i
-				bt[i][j] = "INSERT"
+				#bt[i][j] = "INSERT"
 
 			elif i == 0:
 				D[i][j]= j
-				bt[i][j] = "DELETE"
+				#bt[i][j] = "DELETE"
 
 			elif texta[i-1] == textb[j-1]:
 				D[i][j] = D[i-1][j-1]
-				bt[i][j] = "NO-OP"
+				#bt[i][j] = "NO-OP"
 
 			else:
 				m = min( D[i][j-1], D[i-1][j], D[i-1][j-1] )
 				D[i][j] = 1 + m
 	
-				if m == D[i][j-1]:
-					bt[i][j] =  "INSERT"
-				elif m == D[i-1][j-1]:
-					bt[i][j] = "SUBSTITUTE"
-				elif m == D[i-1][j]:
-					bt[i][j] = "DELETE"
+				#if m == D[i][j-1]:
+				#	bt[i][j] =  "INSERT"
+				#elif m == D[i-1][j-1]:
+				#	bt[i][j] = "SUBSTITUTE"
+				#elif m == D[i-1][j]:
+				#	bt[i][j] = "DELETE"
 
 	for i in range(0, lena+1):
 		print D[i]
 	
-	for j in range(0,lena+1):
-		print bt[j]
+	#for j in range(0,lena+1):
+	#	print bt[j]
 
 	return D[lena][lenb]
 
