@@ -10,4 +10,4 @@ def fibonacci(num):
          fib_lookup[num] = fibonacci(num-1) + fibonacci(num-2)
    return fib_lookup[num]
 
-print (fibonacci(4))
+print (fibonacci(5))
