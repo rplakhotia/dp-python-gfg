@@ -1,7 +1,7 @@
 
 #from enum import Enum
 # edit distance function calculates the minimum number of operations
-# required for changing one screen to another also keeps the trace
+# required for changing one string to another, also keeps the trace
 # of operations
 
 def edit_distance(texta, textb, lena, lenb):
